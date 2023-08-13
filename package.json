@@ -25,6 +25,7 @@
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
+		"cors": "^2.8.5",
 		"gulp-mamp": "^0.0.5"
 	}
 }
