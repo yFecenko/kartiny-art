@@ -4,8 +4,8 @@ const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
 
-// const dist = "./dist/";
-const dist = "C:/ospanel/domains/kartina";
+const dist = "./dist/";
+// const dist = "C:/ospanel/domains/kartina";
 
 gulp.task("copy-html", () => {
   return gulp.src("./src/index.html")
@@ -53,12 +53,12 @@ gulp.task("copy-assets", () => {
 
 gulp.task("watch", () => {
   browsersync.init({
-    // server: "./dist/",
-    // port: 4000,
-    // notify: true
-    proxy: 'http://kartina/',
-    host: 'kartina',
-    open: 'external'
+    server: "./dist/",
+    port: 4000,
+    notify: true
+    // proxy: 'http://kartina/',
+    // host: 'kartina',
+    // open: 'external'
   });
 
   gulp.watch("./src/index.html", gulp.parallel("copy-html"));
