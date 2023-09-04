@@ -39,6 +39,7 @@ const scrolling = (upSelector) => {
 
                 if (r != widthTop + toBlock) {
                     requestAnimationFrame(step);
+                    
                 } else {
                     location.hash = hash;
                 }
